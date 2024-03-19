@@ -4,6 +4,7 @@ import Login from './Login';
 import Signup from './Signup';
 import Reservations from './Reservations';
 import OffcanvasLayout from './OffcanvasLayout';
+import Destinations from './Destinations';
 
 
 const App = () => (
@@ -14,8 +15,8 @@ const App = () => (
       <Route element={<Links />} />
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<Signup />} />
-      <Route path="destinations" >
-      <Route path=":id" element={<h3>Destination</h3>} />
+      <Route path="destinations" element={<Destinations />}>
+      <Route path=":id" />
       </Route>
       <Route path="reservations" element={<Reservations />} />
     </Routes>

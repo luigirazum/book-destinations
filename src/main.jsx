@@ -8,5 +8,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <main className="full-height row align justify">
       <App />
     </main>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
