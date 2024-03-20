@@ -10,6 +10,17 @@ export const fetchDestinations = createAsyncThunk(
     return destinations.data;
   }
 );
+ 
+export const postDestination = createAsyncThunk(
+  "destinations/post",
+  async (destinationData) => {
+    const response = await axios.post(
+      "http://localhost:4000/api/v1/destinations/",
+      destinationData
+    );
+    return response.data;
+  }
+);
 
 const saveStateToLocalStorage = (state) => {
   try {
@@ -47,6 +58,20 @@ const destinationsSlice = createSlice({
       })
 
       .addCase(fetchDestinations.rejected, (state, action) => ({
+        ...state,
+        loading: false,
+        error: action.error.message,
+      }))
+      .addCase(postDestination.pending, (state) => ({
+        ...state,
+        loading: true,
+      }))
+      .addCase(postDestination.fulfilled, (state, action) => ({
+        ...state,
+        loading: false,
+        allDestinations: [...state.allDestinations, action.payload],
+      }))
+      .addCase(postDestination.rejected, (state, action) => ({
         ...state,
         loading: false,
         error: action.error.message,
