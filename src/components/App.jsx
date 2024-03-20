@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchDestinations } from "../redux/destinations/destinationsSlice";
 import Destinations from "./main-pages.jsx";
+import AddDestinations from "./add-destinations.jsx";
 import "../App.css";
 
 const App = () => {
@@ -24,7 +25,8 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="/destinations" element={<Destinations />} />
-          <Route path="reservations" element={<Reservations />} />
+          <Route path="/add-destinations" element={<AddDestinations />} />
+          <Route path="/reservations" element={<Reservations />} />
         </Routes>
       </OffcanvasLayout>
     </>
