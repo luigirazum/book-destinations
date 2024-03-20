@@ -21,12 +21,12 @@ const Login = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h2>Login</h2>
-      <div className="field row wrap">
+      <div className="field row">
         <label className="lbl full" htmlFor="email">Email:</label>
         <input className="grow" type="text" name="email" autoComplete autoFocus value={data.email} onChange={handleChange}/>
       </div>
 
-      <div className="field row wrap">
+      <div className="field row">
         <label className="lbl full" htmlFor="password">Password:</label>
         <input className="grow" type="password" name="password" value={data.password} onChange={handleChange}/>
       </div>

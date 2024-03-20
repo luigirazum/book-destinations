@@ -23,22 +23,22 @@ const Signup = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h2>Sign up</h2>
-      <div className="field row wrap">
+      <div className="field row ">
         <label className="lbl full" htmlFor="username">Name:</label>
         <input className="grow" type="text" name="username" autoComplete autoFocus value={data.username} onChange={handleChange}/>
       </div>
 
-      <div className="field row wrap">
+      <div className="field row ">
         <label className="lbl full" htmlFor="email">Email:</label>
         <input className="grow" type="text" name="email" autoComplete value={data.email} onChange={handleChange}/>
       </div>
 
-      <div className="field row wrap">
+      <div className="field row">
         <label className="lbl full" htmlFor="password">Password:</label>
         <input className="grow" type="password" name="password" value={data.password} onChange={handleChange}/>
       </div>
 
-      <div className="field row wrap">
+      <div className="field row">
         <label className="lbl full" htmlFor="password_confirm">Confirm Password:</label>
         <input className="grow" type="password" name="password_confirm" value={data.password_confirm} onChange={handleChange}/>
       </div>
