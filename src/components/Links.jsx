@@ -5,6 +5,7 @@ const Links = () => (
     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '30px' }} >
      <a href="login" className="btn btn--primary">Login</a>
      <a href="signup" className="btn btn--primary">Sign up</a>
+     
     </div>
   </div>
 );

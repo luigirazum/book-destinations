@@ -38,7 +38,8 @@ function OffcanvasLayout({ children }) {
           <Nav className="flex-column">
             <Nav.Link className="nav-links" as={Link} to="/login">Login</Nav.Link>
             <Nav.Link className="nav-links" as={Link} to="/signup">Signup</Nav.Link>
-            <Nav.Link className="nav-links" as={Link} to="/destinations" style={{ display: 'flex', flexDirection: 'row', gap: '7px'}}>
+            <Nav.Link className="nav-links" as={Link} to="/destinations">Destinations</Nav.Link>
+            <Nav.Link className="nav-links" as={Link} to="/add-destinations" style={{ display: 'flex', flexDirection: 'row', gap: '7px'}}>
               <FontAwesomeIcon icon={faPlus} />
               Add Destinations
             </Nav.Link>
