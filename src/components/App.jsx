@@ -22,11 +22,11 @@ const App = () => {
     <>
       <OffcanvasLayout>
         <Routes>
-          <Route index element={<h2>Splash Screen</h2>} />
+          <Route element={<h2>Splash Screen</h2>} />
           <Route element={<Links />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
-          <Route path="/destinations" element={<Destinations />} />
+          <Route index  element={<Destinations />} />
           <Route path="/destinations:id" element={<DestinationDetails />} />
           <Route path="/add-destinations" element={<AddDestinations />} />
           <Route path="/delete-destinations" element={<DeleteDestinations />} />
