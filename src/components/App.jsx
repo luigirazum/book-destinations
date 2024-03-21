@@ -9,7 +9,9 @@ import { useDispatch } from "react-redux";
 import { fetchDestinations } from "../redux/destinations/destinationsSlice";
 import Destinations from "./main-pages.jsx";
 import AddDestinations from "./add-destinations.jsx";
+import DeleteDestinations from "./delete-destinations.jsx";
 import "../App.css";
+import DestinationDetails from "./details_page.jsx";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,7 +27,9 @@ const App = () => {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="/destinations" element={<Destinations />} />
+          <Route path="/destinations:id" element={<DestinationDetails />} />
           <Route path="/add-destinations" element={<AddDestinations />} />
+          <Route path="/delete-destinations" element={<DeleteDestinations />} />
           <Route path="/reservations" element={<Reservations />} />
         </Routes>
       </OffcanvasLayout>

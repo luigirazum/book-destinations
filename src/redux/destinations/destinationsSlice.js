@@ -22,6 +22,17 @@ export const postDestination = createAsyncThunk(
   }
 );
 
+export const deleteDestination = createAsyncThunk(
+  "destinations/delete",
+  async (destinationId) => {
+    const response = await axios.delete(
+      `http://localhost:4000/api/v1/destinations/${destinationId}`
+    );
+    return destinationId; 
+  }
+)
+
+
 const saveStateToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state);
@@ -75,7 +86,12 @@ const destinationsSlice = createSlice({
         ...state,
         loading: false,
         error: action.error.message,
-      }));
+      }))
+      .addCase(deleteDestination.fulfilled, (state, action) => {
+        state.allDestinations = state.allDestinations.filter(
+          (destination) => destination.id !== action.payload
+        );
+      });
   },
 });
 

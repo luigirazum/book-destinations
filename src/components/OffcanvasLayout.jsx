@@ -40,9 +40,11 @@ function OffcanvasLayout({ children }) {
             <Nav.Link className="nav-links" as={Link} to="/signup">Signup</Nav.Link>
             <Nav.Link className="nav-links" as={Link} to="/destinations">Destinations</Nav.Link>
             <Nav.Link className="nav-links" as={Link} to="/add-destinations" style={{ display: 'flex', flexDirection: 'row', gap: '7px'}}>
+ 
               <FontAwesomeIcon icon={faPlus} />
               Add Destinations
             </Nav.Link>
+            <Nav.Link className="nav-link" as={Link} to="/delete-destinations">Delete Destination</Nav.Link>
             {/* Add more Nav.Link items here */}
           </Nav>
         </Offcanvas.Body>
